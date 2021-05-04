@@ -1,0 +1,10 @@
+package adr.squish.ui.search
+
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+
+class SearchViewModel : ViewModel() {
+    private val _text = MutableLiveData<String>().apply {
+        value = "This is the search fragment"
+    }
+}

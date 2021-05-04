@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Mallow-Collector</string>
+    
+    <string name="nav_explore">Explore</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_shelf">Shelf</string>
 </resources>
