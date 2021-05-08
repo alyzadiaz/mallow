@@ -5,4 +5,6 @@
     <string name="nav_profile">Profile</string>
     <string name="nav_search">Search</string>
     <string name="nav_shelf">Shelf</string>
+
+    <string name="cont_desc_squish">Squishmallow</string>
 </resources>
