@@ -20,6 +20,7 @@ class RecyclerAdapter(private val squishes: List<Squishmallow>) :
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val squish = squishes[position]
         holder.label.text = squish.name
+        holder.img.setBackgroundResource(squish.image)
     }
 
     override fun getItemCount(): Int {

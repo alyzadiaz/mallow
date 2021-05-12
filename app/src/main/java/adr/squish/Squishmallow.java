@@ -1,8 +1,8 @@
 package adr.squish;
 
 public class Squishmallow {
-    private int id, tie_dye;
-    private String name, type, color, squad, sizes_id, image, bio;
+    private int id, tie_dye, image;
+    private String name, type, color, squad, sizes_id, bio;
     private int[] sizes;
 
 
@@ -10,7 +10,7 @@ public class Squishmallow {
 
     }
 
-    public Squishmallow(int i, int td, String n, String t, String c, String s, String s_i, String img, String b){
+    public Squishmallow(int i, int td, String n, String t, String c, String s, String s_i, int img, String b){
         id = i;
         tie_dye = td;
         name = n;
@@ -78,11 +78,11 @@ public class Squishmallow {
         return sizes_id;
     }
 
-    public void setImage(String image){
+    public void setImage(int image){
         this.image = image;
     }
 
-    public String getImage(){
+    public int getImage(){
         return image;
     }
 

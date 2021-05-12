@@ -50,8 +50,15 @@ public class DatabaseAccess {
             sq.setTie_dye(cursor.getInt(4));
             sq.setSquad(cursor.getString(5));
             sq.setSizes_id(cursor.getString(6));
-            sq.setImage(cursor.getString(7));
-            sq.setBio(cursor.getString(8));
+            sq.setBio(cursor.getString(7));
+
+            if(sq.getName().substring(0).equals("A")){
+                String image_location = (sq.getName()+"_"+sq.getSquad()+".png").toLowerCase();
+                //int id = getResources().getIdentifier("com.my.app:drawable/my_image", null, null);
+                
+            }
+
+
 
             list.add(sq);
 

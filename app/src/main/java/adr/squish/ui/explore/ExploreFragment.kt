@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
 
 class ExploreFragment : Fragment() {
     private lateinit var exploreViewModel: ExploreViewModel
@@ -26,12 +27,17 @@ class ExploreFragment : Fragment() {
             ViewModelProvider(this).get(ExploreViewModel::class.java)
         val root = inflater.inflate(R.layout.explore_fragment, container, false)
 
-        val recycler : RecyclerView = root.findViewById(R.id.test_category)
+        val recycler : RecyclerView = root.findViewById(R.id.fantasy_category)
         val databaseAccess : DatabaseAccess = DatabaseAccess.getInstance(context)
         databaseAccess.open()
 
         val sq : List<Squishmallow> = databaseAccess.squish
         databaseAccess.close()
+
+        for(s in sq){
+            val imgLocation = (s.name + "_" + s.squad).toLowerCase(Locale.ROOT)
+            s.image = context?.resources?.getIdentifier(imgLocation,"drawable","adr.squish")!!
+        }
 
         adapter = RecyclerAdapter(sq)
         layoutM = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
